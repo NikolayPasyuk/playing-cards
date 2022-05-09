@@ -1,0 +1,22 @@
+.header {
+    transition-duration: 700ms;
+    transform: translate(-200px);
+}
+
+.header:hover {
+    transition-duration: 700ms;
+    transform: translate(0);
+}
+
+.navLink {
+    text-decoration: none;
+    color: darkcyan;
+}
+
+.navLink:hover {
+    color: fuchsia;
+}
+
+.activeLink {
+    color: blue;
+}

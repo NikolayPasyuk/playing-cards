@@ -1,0 +1,23 @@
+.default {
+    border: 13px;
+    line-height: 2;
+    width: 90px;
+    border-radius: 35px;
+    background: #e0a80d;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.red {
+    border: 13px;
+    line-height: 2;
+    width: 90px;
+    border-radius: 35px;
+    background: red;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.default:disabled {
+    background: silver;
+}
