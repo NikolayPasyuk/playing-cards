@@ -1,0 +1,14 @@
+.spanName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 200px;
+    margin: 10px 0 20px 20px;
+    border: 5px solid #18b5a4;
+}
+
+.pencilName:before {
+    content: '\270E';
+    color: crimson;
+}
