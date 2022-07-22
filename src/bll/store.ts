@@ -12,10 +12,9 @@ import {
 import {applyMiddleware, combineReducers, createStore} from 'redux';
 import thunkMiddleware, {ThunkAction, ThunkDispatch} from 'redux-thunk';
 import {TypedUseSelectorHook, useDispatch, useSelector} from 'react-redux';
-import {ProfileActionsTypes} from './reducers/profile-reducer';
 import {cardsReducer, CardsReducerActionType} from './reducers/cards-reducer';
-import {packReducer, PackReducerActionsType} from "./reducers/pack-reducer";
-import {modalReducer, ModalReducerActionsType} from "./reducers";
+import {packReducer, PackReducerActionsType} from './reducers/pack-reducer';
+import {modalReducer, ModalReducerActionsType} from './reducers';
 
 // @ts-ignore
 //redux-devtools
@@ -38,11 +37,10 @@ const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
 
 export type AppRootStateType = ReturnType<typeof rootReducer>
 export type AppRootActionsType =
-    LoginActionType
+    | LoginActionType
     | AppActionType
     | RecoveryPasswordActionsType
     | RegistrationActionsType
-    | ProfileActionsTypes
     | CardsReducerActionType
     | ModalReducerActionsType
     | PackReducerActionsType

@@ -1,68 +1,38 @@
-import React from 'react'
-import style from '../Profile.module.css'
+import React from 'react';
+import {UserAvatar} from '../UserAvatar/UserAvatar';
+import Button from '@mui/material/Button';
 
-import { EditOutlined, Reply } from '@mui/icons-material'
-import { Button, ButtonGroup } from '@material-ui/core'
-import { UserAvatar } from './UserAvatar/UserAvatar'
-import { EditableSpan } from './EditableSpan/EditableSpan'
 
-export type ProfileInfoType = {
-    avatar: string | undefined
+type ProfileInfoPropsType = {
+    avatar?: string
     name: string
-    email: string
-    packsCount: number
     editMode: boolean
-    setEditMode: (editMode: boolean) => void
     onClickChangeEditModeHandler: () => void
-    onClickLogoutChangeHandler: () => void
 }
 
-export const ProfileInfo = ({ avatar, name, email, packsCount, editMode, setEditMode, onClickChangeEditModeHandler, onClickLogoutChangeHandler }: ProfileInfoType) => {
-    const updateTitle = () => {
+export const ProfileInfo: React.FC<ProfileInfoPropsType> = ({avatar, editMode, name, onClickChangeEditModeHandler}) => {
 
+    const stDev: React.CSSProperties = {
+        color: '#555',
+        margin: '4px 0 10px 0',
     }
+
+    const stName: React.CSSProperties = {
+        fontWeight: '600',
+        fontSize: '18px',
+        lineHeight: '27px',
+        color: '#2D2E46',
+        margin: '6px 0',
+        // textAlign: 'center', из-за родителя можно не выравнивать
+    }
+
     return (
-        <div className={style.profileInfo}>
-            <div className={style.infoByUser}>
-                <UserAvatar avatar={avatar} />
-                <div className={style.infoUser}>
-
-                    <div>
-                        <div>
-                            <EditableSpan title={'Name:' + name} editMode={editMode} setEditMode={setEditMode} updateTitle={updateTitle} />
-                        </div>
-                        <div>
-                            <EditableSpan title={'Email:' + email} editMode={editMode} setEditMode={setEditMode} updateTitle={updateTitle} />
-                        </div>
-                        <div>
-                            <EditableSpan title={'Total packs:' + packsCount} editMode={editMode} setEditMode={setEditMode} updateTitle={updateTitle} />
-                        </div>
-                    </div>
-
-                    {/* <div> Name: {name}</div>
-                    <div> Email: {email}</div>
-                    <div>Total packs: {packsCount}</div> */}
-                    <ButtonGroup >
-                        <Button
-                            variant={'outlined'}
-                            size={'small'}
-                            endIcon={<EditOutlined />}
-                            onClick={onClickChangeEditModeHandler}
-                        >
-                            Edit
-                        </Button>
-                        <Button
-                            variant={'outlined'}
-                            size={'small'}
-                            endIcon={<Reply />}
-                            onClick={onClickLogoutChangeHandler}
-                        >
-                            Logout
-                        </Button>
-                    </ ButtonGroup >
-
-                </div>
+        <div style={{background: '#D9D9F1', padding: 24, textAlign: 'center'}}>
+            <UserAvatar avatar={avatar} editMode={editMode}/>
+            <div style={stName}>{name}</div>
+            <div style={stDev}>Frontend developer</div>
+            <div><Button variant={'outlined'} onClick={onClickChangeEditModeHandler}>Edit profile</Button>
             </div>
         </div>
-    )
-}
+    );
+};

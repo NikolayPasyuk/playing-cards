@@ -17,7 +17,8 @@ import {PackTable} from './PackTable/PackTable';
 import {Pagination} from '../../common/Pagination/Pagination';
 import {Switcher} from './Switcher/Switcher';
 import {RangeSlider} from '../../common/RangeSlider/RangeSllider';
-import style from '../Profile/Profile.module.css';
+import style from '../PacksList/PacksList.module.css';
+import {styleBtn} from '../../../styles/commonMui';
 
 
 export const PacksList = () => {
@@ -82,13 +83,14 @@ export const PacksList = () => {
 
                     <div className={style.buttonPosition}>
                         <Button
-                            sx={{
+                            sx={[styleBtn, {
                                 borderRadius: '4px',
-                                margin: '0px',
-                                color: '#ffff',
-                                height: 'auto',
-                                background: 'linear-gradient(to right, #344654, #344654)'
-                            }}
+                                fontWeight: 'bold',
+                                margin: '0 0 14px 0',
+                                padding: '8px 16px 4px',
+                                color: '#2c2b3f',
+                                height: 'auto'
+                            }]}
                             variant={'contained'}
                             onClick={openAddModalWindowHandle}
                         >

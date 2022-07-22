@@ -72,7 +72,7 @@ export const CardsList = () => {
 
     return (
         <div style={{margin: '30px auto'}}>
-            <div className={styles.container}>
+            <div className={styles.profileContainer}>
                 <div className={s.contentBlock}>
                     <div className={s.backLinkWrapper}>
                         <Link className={s.backLink} to={'../pack-table'}

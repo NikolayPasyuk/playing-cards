@@ -1,4 +1,4 @@
-.container {
+.profileContainer {
     width: 90%;
     display: flex;
     justify-content: space-between;
@@ -10,73 +10,9 @@
     box-shadow: 0 3px 3px -2px rgb(0 0 0 / 20%), 0 3px 4px 0 rgb(0 0 0 / 14%), 0 1px 8px 0 rgb(0 0 0 / 12%);
 }
 
-.profile {
+.sidebar {
     width: 250px;
     background: #ECECF9;
-}
-
-.information {
-}
-
-.profileInfo {
-    display: grid;
-    grid-auto-columns: 1fr;
-    gap: 0 0;
-    grid-area: profileInfo;
-}
-
-.cardsInfo {
-    grid-area: cardsInfo;
-    border-top: 2px solid black;
-}
-
-.cards {
-    grid-area: cards;
-    font-size: 30px;
-    color: #910505;
-    font-weight: 900;
-    text-align: center;
-    border-bottom: 2px solid black;
-}
-
-.infoByUser {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-}
-
-.infoAvatar {
-    margin: 5px;
-    padding: 5px;
-    flex: 0 1 auto;
-    align-self: flex-start;
-    margin-top: 10px;
-
-}
-
-.infoUser {
-    margin: 5px;
-    padding: 5px;
-    flex: 0 1 auto;
-    align-self: center;
-}
-
-
-.photo {
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
-
-}
-
-.textInCardsInfo {
-    text-align: center;
-}
-
-.styleForEditableSpan {
-    display: block;
 }
 
 .content {
@@ -85,11 +21,4 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 40px 30px;
-}
-
-.buttonPosition {
-    margin-bottom: 20px;
-    align-self: self-end;
-    display: flex;
-    flex-direction: column;
 }

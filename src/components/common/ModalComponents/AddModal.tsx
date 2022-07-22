@@ -1,7 +1,7 @@
 import React, {ChangeEvent, FC} from 'react';
-import classes from "./AddModal.module.css";
-import {TextField} from "@mui/material";
-import LoadingButton from "@mui/lab/LoadingButton";
+import classes from './AddModal.module.css';
+import {TextField} from '@mui/material';
+import LoadingButton from '@mui/lab/LoadingButton';
 import {ButtonCP} from '../../pages/PacksList/PackTable/PackTable';
 
 type PropsType = {
@@ -29,13 +29,17 @@ export const AddModal: FC<PropsType> =
                            onChange={updateNewPackName}
                            label="Name pack" variant="standard"/>
                 <div className={classes.btnGroup}>
-                    <ButtonCP style={{width: "130px", backgroundColor: '#7f8383', color: '#ffff'}}
+                    <ButtonCP style={{
+                        width: '130px',
+                        backgroundColor: '#7f8383',
+                        color: '#ffff'
+                    }}
                               onClick={closeModalClick}>Cancel</ButtonCP>
                     <LoadingButton
                         loading={isLoading}
                         loadingPosition="center"
                         variant="contained"
-                        style={{width: "130px", backgroundColor: '#7f8383'}}
+                        style={{width: '130px', backgroundColor: '#7f8383'}}
                         sx={{textTransform: 'none'}}
                         onClick={addNewPack}
                     >

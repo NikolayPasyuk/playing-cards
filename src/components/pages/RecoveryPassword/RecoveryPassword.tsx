@@ -1,8 +1,8 @@
 import React from 'react';
-import {Grid, Typography} from '@mui/material';
-import {useAppSelector} from "../../../bll/store";
-import Email from "./Email/Email";
-import {RecoveryPasswordForm} from "./RecoveryPasswordForm/RecoveryPasswordForm";
+import {Grid} from '@mui/material';
+import {useAppSelector} from '../../../bll/store';
+import Email from './Email/Email';
+import {RecoveryPasswordForm} from './RecoveryPasswordForm/RecoveryPasswordForm';
 import '../../../index.css';
 
 

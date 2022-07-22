@@ -1,6 +1,6 @@
 import {AppRootStateType, ThunkType} from '../store';
 import {authApi} from '../../api/auth-api';
-import {getUserData} from './login-reducer';
+import {getUserData, LoginResponseType} from './login-reducer';
 
 export type LoadingStatusType = 'idle' | 'loading'
 
@@ -44,7 +44,6 @@ export const selectAppStatus = (state: AppRootStateType) => state.appReducer.loa
 
 //actions
 export const setAppError = (error: string | null) => ({type: 'app/SET-APP-ERROR', error} as const)
-
 export const setLoadingStatus = (loadingStatus: LoadingStatusType) => {
     return {
         type: 'app/SET-LOADING-STATUS',
@@ -71,3 +70,16 @@ export const authMe = (): ThunkType => async dispatch => {
     }
 }
 
+export const logOut = (): ThunkType => async dispatch => {
+    try {
+        dispatch(setLoadingStatus('loading'))
+        const res = await authApi.logOut()
+        dispatch(setTrash(res.data.info))
+        dispatch(getUserData({} as LoginResponseType, false))
+    } catch (e: any) {
+        const error = e.response ? e.response.data.error : (e.message + ', more details in the console');
+        dispatch(setAppError(error))
+    } finally {
+        dispatch(setLoadingStatus('idle'))
+    }
+}
