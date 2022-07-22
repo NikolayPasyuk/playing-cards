@@ -1,5 +1,5 @@
 import React from 'react';
-import userAvatar from '../assets/user.png';
+import userAvatar from '../../../../assets/images/user.png';
 import {IconButton} from '@mui/material';
 import PhotoCameraOutlinedIcon from '@mui/icons-material/PhotoCameraOutlined';
 
