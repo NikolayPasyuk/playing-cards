@@ -1,22 +1,32 @@
-.navbar__link{
+.itemLink {
     align-items: center;
     background: #ebe0e9;
     color: #2d2e46;
     display: flex;
-    font-size: 14px;
     font-style: normal;
-    font-weight: 400;
-    letter-spacing: .4px;
+    letter-spacing: 3px;
     line-height: 16px;
     padding: 5px 20px;
     text-align: center;
     text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
 }
 
-.active{
-    color: red;
+.itemLink.active {
+    background: #DCCCDB;
+    position: relative;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
 }
 
-.activeLink{
-    color: red;
+.itemLink.active::after {
+    background: #374856;
+    bottom: 0;
+    content: '';
+    height: 3px;
+    left: 0;
+    position: absolute;
+    width: 100%;
 }

@@ -28,7 +28,7 @@
 Экспорт проекта локально на компьютер:
 
 ```
-git clone https://github.com/evgeny3322/cards-for-learning.git
+https://github.com/NikolayPasyuk/playing-cards.git
 ```
 
 Для установки зависимостей:
@@ -45,4 +45,4 @@ yarn start
 
 ## Demo
 
-Посмотреть приложение в действии можно на [GitHub Pages](https://NikolayPasyuk.github.io/playing-cards/)
+Посмотреть приложение в действии можно на [GitHub Pages](https://NikolayPasyuk.github.io/playing-cards)
