@@ -14,8 +14,13 @@ import {
 } from '../../../bll';
 import classes from './ModalWindow.module.css';
 import {useAppDispatch, useAppSelector} from '../../../bll/store';
-import {AddCardModal, AddModal, DeleteModal, EditCardModal} from '../ModalComponents';
-import {EditModal} from "../ModalComponents/EditModal";
+import {
+    AddCardModal,
+    AddModal,
+    DeleteModal,
+    EditCardModal,
+    EditModal
+} from '../ModalComponents';
 
 const style = {
     position: 'absolute' as 'absolute',
@@ -54,7 +59,6 @@ export const ModalWindow = () => {
     const removeCardClick = () => {
         dispatch(cards.removeCard(currentPackID as string))
     }
-
 
     const updateCurrentPackName = (e: ChangeEvent<HTMLTextAreaElement>) => {
         dispatch(setCurrentPackPropsAC(e.currentTarget.value, currentPackID))

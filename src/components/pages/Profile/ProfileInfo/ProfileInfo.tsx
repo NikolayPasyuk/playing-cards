@@ -23,7 +23,6 @@ export const ProfileInfo: React.FC<ProfileInfoPropsType> = ({avatar, editMode, n
         lineHeight: '27px',
         color: '#2D2E46',
         margin: '6px 0',
-        // textAlign: 'center', из-за родителя можно не выравнивать
     }
 
     return (

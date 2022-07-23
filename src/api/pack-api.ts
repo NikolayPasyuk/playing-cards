@@ -38,7 +38,6 @@ export type PackCard = {
     __v: number
 }
 
-
 export type Pack = {
     cardPacks: PackCard[]
     page: number

@@ -17,7 +17,8 @@ export const UserAvatar: React.FC<UserAvatarPropsType> = ({avatar, editMode}) =>
             <div className={styles.userPhoto}>
 
                 <div className={styles.userPhotoInner}>
-                    <img src={avatar && avatar !== ' ' ? avatar : userAvatar} alt={'user'}/>
+                    <img src={avatar && avatar !== ' ' ? avatar : userAvatar}
+                         alt={'user'}/>
                 </div>
 
                 {editMode &&

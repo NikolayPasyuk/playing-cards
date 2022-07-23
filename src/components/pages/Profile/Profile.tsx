@@ -61,7 +61,7 @@ const Profile = () => {
         dispatch(setPageCount(page))
     }
 
-    const openAddModalWindowHandle = () => {
+    const openAddModalWindowHandler = () => {
         dispatch(controlModalWindowAC(true, 'ADD'))
     }
 
@@ -109,7 +109,7 @@ const Profile = () => {
                                     height: 'auto'
                                 }]}
                                 variant={'contained'}
-                                onClick={openAddModalWindowHandle}
+                                onClick={openAddModalWindowHandler}
                             >
                                 Add new Pack
                             </Button>

@@ -7,8 +7,8 @@ export const instanceHeroku = axios.create({
 })
 
 export const instance = axios.create({
-    baseURL: process.env.REACT_APP_BACK_URL || 'http://localhost:7542/2.0/',
-    // baseURL: 'https://neko-back.herokuapp.com/2.0',
+    // baseURL: process.env.REACT_APP_BACK_URL || 'http://localhost:7542/2.0/',
+    baseURL: 'https://neko-back.herokuapp.com/2.0',
     withCredentials: true,
 })
 
@@ -18,7 +18,7 @@ export type RegistrationParamsType = {
 }
 export type UpdateUserInfo = {
     name: string
-    avatar: string
+    avatar?: string
 }
 
 export const authApi = {

@@ -159,7 +159,7 @@ export const updatePackNameTC = (id: string, name: string): ThunkType =>
             dispatch(setAppError(error))
         } finally {
             dispatch(setLoadingStatus('idle'))
-            // dispatch(controlModalWindowAC())
+            dispatch(controlModalWindowAC())
             dispatch(setCurrentPackPropsAC())
         }
     }
